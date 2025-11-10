@@ -1,0 +1,88 @@
+# index.html
+cat > index.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hand-picked premium goods – fast delivery in Switzerland. Click any product to explore.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://__NETLIFY_URL__/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MiniShop – Premium Goods in Switzerland">
+  <meta property="og:description" content="Discover curated products with detailed images and fast delivery.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://__NETLIFY_URL__/">
+  <meta property="og:image" content="https://__NETLIFY_URL__/assets/og-home.jpg">
+  <meta property="og:site_name" content="MiniShop">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MiniShop – Premium Goods in Switzerland">
+  <meta name="twitter:description" content="Hand-picked items, fast delivery.">
+  <meta name="twitter:image" content="https://__NETLIFY_URL__/assets/og-home.jpg">
+
+  <title>MiniShop – Premium Goods Delivered in Switzerland</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header>
+  <div class="container header-flex">
+    <h1 class="logo"><a href="/">MiniShop</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/payment.html">Payment & Delivery</a>
+      <a href="/admin.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <h2 id="hero-title">Hand-picked Goods for Switzerland</h2>
+    <p>Fast delivery • Free over CHF 100 • 30-day returns</p>
+  </div>
+</section>
+
+<main class="container">
+  <section aria-labelledby="products-heading">
+    <h2 id="products-heading" class="visually-hidden">Our Products</h2>
+    <div id="product-grid" class="grid" role="list"></div>
+  </section>
+</main>
+
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-product-title">
+  <div class="modal-content">
+    <button class="close" aria-label="Close modal">×</button>
+    <div class="modal-body">
+      <figure class="large-img">
+        <img id="modal-main-img" src="" alt="" loading="lazy">
+      </figure>
+      <div class="thumbs" role="list" aria-label="Product image thumbnails"></div>
+      <article class="details">
+        <h3 id="modal-product-title"></h3>
+        <p id="modal-desc"></p>
+        <p class="price" id="modal-price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <meta itemprop="priceCurrency" content="CHF">
+          <span itemprop="price"></span>
+        </p>
+        <button class="buy-btn">Add to cart</button>
+      </article>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> MiniShop – All rights reserved.</p>
+  </div>
+</footer>
+
+<script type="application/ld+json" id="jsonld-home"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
+EOF

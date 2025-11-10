@@ -1,9 +1,5 @@
 [build]
-  publish = ".next"
-  functions = "netlify/functions"
+  publish = "."
 
-# REMOVE THIS LINE:
-# command = "npm run build"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# No build command needed
+# No functions

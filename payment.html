@@ -1,0 +1,42 @@
+# payment.html
+cat > payment.html << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Payment options, shipping rates, and return policy for MiniShop Switzerland.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://__NETLIFY_URL__/payment.html">
+  <title>Payment & Delivery – MiniShop Switzerland</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+  <div class="container header-flex">
+    <h1 class="logo"><a href=" payment.html">MiniShop</a></h1>
+    <nav aria-label="Main navigation">
+      <a href="/">Home</a>
+      <a href="/payment.html">Payment & Delivery</a>
+      <a href="/admin.html">Admin</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container page">
+  <h1>Payment & Delivery Information</h1>
+  <section><h2>Accepted payment methods</h2><ul><li>Credit/Debit card (Visa, Mastercard)</li><li>PayPal</li><li>Apple Pay / Google Pay</li></ul></section>
+  <section><h2>Shipping</h2><p>Standard: 3–5 days – CHF 7.90</p><p>Express: 1–2 days – CHF 14.90</p><p>Free over CHF 100</p></section>
+  <section><h2>Returns</h2><p>30-day return policy. Unused items only.</p></section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© <span id="year"></span> MiniShop – All rights reserved.</p>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+EOF
